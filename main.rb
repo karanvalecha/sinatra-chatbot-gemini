@@ -8,6 +8,10 @@ get '/' do
   erb :index
 end
 
+get '/debug' do
+  ENV.to_h.to_json
+end
+
 post '/chat' do
   question = params[:question]
   response = fetch_response(question)
@@ -24,7 +28,9 @@ def fetch_response(question)
   encoded_question = URI.encode_www_form_component(question)
   ai_conversation(question).chat_completion
 rescue StandardError => e
-  puts "Error: #{e.message}"
+  error = "Error: #{e.message}"
+  puts error
+  error
 end  
 
 def response_to_html(response)
