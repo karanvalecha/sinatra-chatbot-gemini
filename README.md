@@ -4,5 +4,5 @@ Web Aplications Chatbot AI Using Ruby.
 ## Install
 ```
 bundle install
-ruby main.rb
+API_KEY=abc-123 ruby main.rb
 ```
