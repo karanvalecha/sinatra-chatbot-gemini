@@ -1,10 +1,24 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.8.7)
+      public_suffix (>= 2.0.2, < 7.0)
+    baran (0.1.12)
     base64 (0.2.0)
     json (2.7.2)
+    json-schema (4.3.1)
+      addressable (>= 2.8)
+    langchainrb (0.19.2)
+      baran (~> 0.1.9)
+      json-schema (~> 4)
+      matrix
+      pragmatic_segmenter (~> 0.3.0)
+      zeitwerk (~> 2.5)
+    matrix (0.4.2)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
+    pragmatic_segmenter (0.3.24)
+    public_suffix (6.0.1)
     rack (3.0.11)
     rack-protection (4.0.0)
       base64 (>= 0.1.0)
@@ -24,6 +38,7 @@ GEM
       tilt (~> 2.0)
     tilt (2.3.0)
     webrick (1.8.1)
+    zeitwerk (2.7.1)
 
 PLATFORMS
   arm64-darwin-24
@@ -31,6 +46,7 @@ PLATFORMS
 
 DEPENDENCIES
   json
+  langchainrb
   rackup (~> 2.1)
   redcarpet
   sinatra
