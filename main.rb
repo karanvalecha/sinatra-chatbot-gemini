@@ -8,10 +8,6 @@ get '/' do
   erb :index
 end
 
-get '/debug' do
-  ENV.to_h.to_json
-end
-
 post '/chat' do
   question = params[:question]
   response = fetch_response(question)
