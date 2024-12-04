@@ -1,12 +1,9 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "main.rb",
-      "use": "@vercel/ruby"
-    }
+    { "src": "main.rb", "use": "@vercel/ruby" }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/" }
+    { "src": "/(.*)", "dest": "main.rb" }
   ]
 }
